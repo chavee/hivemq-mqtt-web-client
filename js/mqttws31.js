@@ -1461,7 +1461,7 @@ Messaging = (function (global) {
             }
             clientIdLength++;
         }
-        if (typeof clientId !== "string" || clientIdLength < 1 | clientIdLength > 23)
+        if (typeof clientId !== "string" || clientIdLength < 1 | clientIdLength > 256)
             throw new Error(format(ERROR.INVALID_ARGUMENT, [clientId, "clientId"]));
 
         var client = new ClientImpl(host, port, clientId);
