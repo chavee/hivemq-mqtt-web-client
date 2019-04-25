@@ -1,2 +1,2 @@
-websocketserver = 'broker.nexpie.com';
+websocketserver = 'broker.nexpie.io';
 websocketport = 8083;
