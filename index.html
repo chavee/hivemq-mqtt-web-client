@@ -63,12 +63,12 @@ limitations under the License.
                 <form class="custom">
                     <div class="large-5 columns">
                         <label>Host *</label>
-                        <input id="urlInput" type="text" value="broker.mqttdashboard.com">
+                        <input id="urlInput" type="text" value="">
                     </div>
 
                     <div class="large-1 columns">
                         <label>Port *</label>
-                        <input id="portInput" type="text" value="8000"/>
+                        <input id="portInput" type="text" value=""/>
                     </div>
 
                     <div class="large-4 columns">
@@ -314,12 +314,16 @@ limitations under the License.
         return text;
     }
 
+
+    if (typeof enablessl != 'undefined') {
+        $('#sslInput').prop('checked', enablessl||false);
+    }
+    $('#urlInput').val(websocketserver);
+    $('#portInput').val(websocketport);
+
+
     $(document).foundation();
     $(document).ready(function () {
-
-        $('#urlInput').val(websocketserver);
-        $('#portInput').val(websocketport);
-        $('#clientIdInput').val('clientId-' + randomString(10));
 
         $('#colorChooser').minicolors();
 
