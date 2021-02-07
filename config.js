@@ -1,2 +1,2 @@
-websocketserver = 'broker.nexpie.io';
-websocketport = 8083;
+websocketserver = 'mqtt.netpie.io';
+websocketport = 443;
